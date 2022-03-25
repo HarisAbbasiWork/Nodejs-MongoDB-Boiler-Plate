@@ -1,7 +1,7 @@
 var createError = require('http-errors');
 const express = require('express')
 var request =require('request')
-const app = express()
+var app = express()
 require('dotenv').config()
 const db = require('./config/dbconfig.js')
 var cookieParser = require('cookie-parser');
