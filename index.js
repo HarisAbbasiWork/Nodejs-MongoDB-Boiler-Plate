@@ -3,11 +3,11 @@ var express = require('express')
 var request =require('request')
 var app = express()
 require('dotenv').config()
-const db = require('./config/dbconfig.js')
+const db = require('./config/dbConfig.js')
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
-var userroutes1 = require('./routes/userroutes');
+var userroutes1 = require('./routes/userRoutes');
 const port = 5000
 var cors = require('cors')
 const expressSanitizer = require('express-sanitizer');
