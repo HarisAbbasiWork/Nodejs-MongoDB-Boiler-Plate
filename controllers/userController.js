@@ -1,4 +1,4 @@
-var userModel = require('../models/usermodel')
+var userModel = require('../models/userModel')
 const bcrypt = require("bcrypt")
 var ObjectId = require('mongodb').ObjectID;
 const saltRounds = 10;
