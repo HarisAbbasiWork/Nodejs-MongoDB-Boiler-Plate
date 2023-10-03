@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var user_controller = require('../controllers/usercontroller');
+var user_controller = require('../controllers/userController');
 var jwt = require('jsonwebtoken');
 const verifyToken=(req,res,next)=>{
     const token=req.headers["x-access-token"]
