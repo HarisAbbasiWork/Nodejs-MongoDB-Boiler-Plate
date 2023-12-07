@@ -21,6 +21,9 @@
     "mongodb": "^4.2.1",
     "mongoose": "^5.10.9",
     "morgan": "^1.10.0",
-    "request": "^2.88.2"
+    "nodemailer": "^6.9.7",
+    "otp-generator": "^4.0.1",
+    "request": "^2.88.2",
+    "twilio": "^4.19.3"
   }
 }

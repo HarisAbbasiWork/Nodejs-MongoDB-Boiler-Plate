@@ -1,10 +1,9 @@
-C
 const mongoose = require('mongoose'); 
  
  mongoose.Promise = global.Promise;
  require('dotenv').config()
 
- mongoose.connect('mongodb+srv://${process.env.user}:${process.env.PASS}@cluster0.9zwax.mongodb.net/myFirstDatabase?retryWrites=true', {
+ mongoose.connect(`${process.env.DB_URL}`, {
   dbName: process.env.DB_NAME,
   user: process.env.USER,
   pass: process.env.PASS,

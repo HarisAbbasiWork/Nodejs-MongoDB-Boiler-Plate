@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var user_controller = require('../controllers/userController');
+var userController = require('../controllers/userController');
 var jwt = require('jsonwebtoken');
 const verifyToken=(req,res,next)=>{
     const token=req.headers["x-access-token"]
@@ -21,8 +21,19 @@ const verifyToken=(req,res,next)=>{
     }
   }
         
-router.post('/', user_controller.createuser)
-router.get('/',verifyToken, user_controller.getusers)
-router.get('/:name',verifyToken, user_controller.getuserbyname)
-router.post('/login', user_controller.login)
+//Route for sending registration OTP
+router.post('/sendotp', userController.sendOtp)
+//Route for verifying registration OTP
+router.post('/confirmotp', userController.confirmOtp)
+//Route for registering after verification
+router.post('/', userController.createUser)
+//Route for registering after verification
+router.post('/login', userController.login)
+//Route for getting forget password otp on email
+router.post('/forgetpassword', userController.forgetPassword)
+//Route for verifying forget password otp
+router.post('/verifyotp', userController.verifyOTP)
+//Route for getting forget password otp on email
+router.post('/resetpassword', userController.resetPassword)
+router.get('/roles', userController.getRoles)
 module.exports = router;
