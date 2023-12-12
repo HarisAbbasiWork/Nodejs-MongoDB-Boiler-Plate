@@ -35,5 +35,6 @@ router.post('/forgetpassword', userController.forgetPassword)
 router.post('/verifyotp', userController.verifyOTP)
 //Route for getting forget password otp on email
 router.post('/resetpassword', userController.resetPassword)
+//Route for getting roles
 router.get('/roles', userController.getRoles)
 module.exports = router;
