@@ -19,7 +19,7 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(expressSanitizer())
 app.use(cookieParser());
-app.use("/user",userroutes1);
+app.use("/backend/user",userroutes1);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

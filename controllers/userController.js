@@ -241,6 +241,7 @@ const login = async (req, res) => {
       }
       // const passworddoc = await passwordModel.findOne({ user: user._id })
       // console.log(user, passworddoc)
+      console.log("await bcrypt.compare(password, user.password) ",await bcrypt.compare(password, user.password))
       if (await bcrypt.compare(password, user.password)) {
         const accessToken = await jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
           expiresIn: '2d'
